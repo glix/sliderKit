@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Slider Kit > Image fx add-on</title>
+		<meta name="Keywords" content="slider, kit, slideshow, gallery, carousel, jquery plugin, images transitions" />
+		<meta name="Description" content="Slider Kit jQuery extension: images transitions, fancy effects" />
+		
+		<!-- jQuery library -->
+		<script type="text/javascript" src="../lib/js/external/_oldies/jquery-1.3.min.js"></script>
+		<!--<script type="text/javascript" src="../lib/js/external/jquery-1.6.2.min.js"></script>-->
+		
+		<!-- jQuery Plugin scripts -->
+		<script type="text/javascript" src="../lib/js/external/jquery.easing.1.3.min.js"></script>
+		<script type="text/javascript" src="../lib/js/external/jquery.mousewheel.min.js"></script>
+		
+		<!-- Slider Kit scripts -->
+		<script type="text/javascript" src="../lib/js/sliderkit/jquery.sliderkit.1.9.2.pack.js"></script>
+		<script type="text/javascript" src="../lib/js/sliderkit/addons/sliderkit.timer.1.0.pack.js"></script>
+		<script type="text/javascript" src="../lib/js/sliderkit/addons/sliderkit.counter.1.0.pack.js"></script>
+		<script type="text/javascript" src="../lib/js/sliderkit/addons/sliderkit.imagefx.1.0.pack.js"></script>
+
+		<!-- Slider Kit launch -->
+		<script type="text/javascript">
+			$(window).load(function(){ //$(window).load() must be used instead of $(document).ready() because of Webkit compatibility				
+				
+				/*---------------------------------
+				 *	Example #01 Simple usage
+				 *---------------------------------*/
+				$(".transition-demo01").sliderkit({
+					auto:1,
+					autostill:true,
+					timer:true,
+					circular:true,
+					panelfx:'fancy',
+					imagefx:{
+						fxType: 'random' // curtain, zipper, wave, fountain, random
+					},
+					debug:1
+				});
+				
+				/*---------------------------------
+				 *	Example #01 > Playing with transitions
+				 *---------------------------------*/
+				
+				// Get the sliderkit object data
+				var myGallery01 = $( '.transition-demo01' ).data( 'sliderkit' );
+				
+				// Links handlers
+				$("#curtain_default").click(function(){
+					myGallery01.options.imagefx.fxType = 'curtain';
+					myGallery01.options.imagefx.stripOrientation = 'default';
+					myGallery01.options.imagefx.stripPosition = 'default';
+					myGallery01.options.imagefx.stripDirection = 'default';
+					return false;
+				});
+				$("#curtain_dirreverse").click(function(){
+					myGallery01.options.imagefx.fxType = 'curtain';
+					myGallery01.options.imagefx.stripOrientation = 'default';
+					myGallery01.options.imagefx.stripPosition = 'default';
+					myGallery01.options.imagefx.stripDirection = 'reverse';
+					return false;
+				});
+				$("#curtain_flipdefault").click(function(){
+					myGallery01.options.imagefx.fxType = 'curtain';
+					myGallery01.options.imagefx.stripOrientation = 'reverse';
+					myGallery01.options.imagefx.stripPosition = 'default';
+					myGallery01.options.imagefx.stripDirection = 'default';
+					return false;
+				});
+				$("#curtain_flipdirreverse").click(function(){
+					myGallery01.options.imagefx.fxType = 'curtain';
+					myGallery01.options.imagefx.stripOrientation = 'reverse';
+					myGallery01.options.imagefx.stripPosition = 'default';
+					myGallery01.options.imagefx.stripDirection = 'reverse';
+					return false;
+				});
+				$("#curtain_defaultdirauto").click(function(){
+					myGallery01.options.imagefx.fxType = 'curtain';
+					myGallery01.options.imagefx.stripOrientation = 'default';
+					myGallery01.options.imagefx.stripPosition = 'default';
+					myGallery01.options.imagefx.stripDirection = 'auto';
+					return false;
+				});
+				$("#wave_default").click(function(){
+					myGallery01.options.imagefx.fxType = 'wave';
+					myGallery01.options.imagefx.stripOrientation = 'default';
+					myGallery01.options.imagefx.stripPosition = 'default';
+					myGallery01.options.imagefx.stripDirection = 'default';
+					return false;
+				});
+				$("#wave_default_dirright").click(function(){
+					myGallery01.options.imagefx.fxType = 'wave';
+					myGallery01.options.imagefx.stripOrientation = 'default';
+					myGallery01.options.imagefx.stripPosition = 'default';
+					myGallery01.options.imagefx.stripDirection = 'reverse';
+					return false;
+				});
+				$("#wave_reverse_dirleft").click(function(){
+					myGallery01.options.imagefx.fxType = 'wave';
+					myGallery01.options.imagefx.stripOrientation = 'default';
+					myGallery01.options.imagefx.stripPosition = 'reverse';
+					myGallery01.options.imagefx.stripDirection = 'default';
+					return false;
+				});
+				$("#wave_reverse_dirright").click(function(){
+					myGallery01.options.imagefx.fxType = 'wave';
+					myGallery01.options.imagefx.stripOrientation = 'default';
+					myGallery01.options.imagefx.stripPosition = 'reverse';
+					myGallery01.options.imagefx.stripDirection = 'reverse';
+					return false;
+				});
+				$("#wave_flip_dirleft").click(function(){
+					myGallery01.options.imagefx.fxType = 'wave';
+					myGallery01.options.imagefx.stripOrientation = 'reverse';
+					myGallery01.options.imagefx.stripPosition = 'default';
+					myGallery01.options.imagefx.stripDirection = 'default';
+					return false;
+				});
+				$("#wave_flip_dirright").click(function(){
+					myGallery01.options.imagefx.fxType = 'wave';
+					myGallery01.options.imagefx.stripOrientation = 'reverse';
+					myGallery01.options.imagefx.stripPosition = 'default';
+					myGallery01.options.imagefx.stripDirection = 'reverse';
+					return false;
+				});
+				$("#wave_flipreverse_dirleft").click(function(){
+					myGallery01.options.imagefx.fxType = 'wave';
+					myGallery01.options.imagefx.stripOrientation = 'reverse';
+					myGallery01.options.imagefx.stripPosition = 'reverse';
+					myGallery01.options.imagefx.stripDirection = 'default';
+					return false;
+				});
+				$("#wave_flipreverse_dirright").click(function(){
+					myGallery01.options.imagefx.fxType = 'wave';
+					myGallery01.options.imagefx.stripOrientation = 'reverse';
+					myGallery01.options.imagefx.stripPosition = 'reverse';
+					myGallery01.options.imagefx.stripDirection = 'reverse';
+					return false;
+				});
+				$("#fountain_default").click(function(){
+					myGallery01.options.imagefx.fxType = 'fountain';
+					myGallery01.options.imagefx.stripOrientation = 'default';
+					myGallery01.options.imagefx.stripPosition = 'default';
+					myGallery01.options.imagefx.stripDirection = 'default';
+					return false;
+				});
+				$("#fountain_default_random").click(function(){
+					myGallery01.options.imagefx.fxType = 'fountain';
+					myGallery01.options.imagefx.stripOrientation = 'default';
+					myGallery01.options.imagefx.stripPosition = 'default';
+					myGallery01.options.imagefx.stripDirection = 'random';
+					return false;
+				});
+				$("#fountain_reverse").click(function(){
+					myGallery01.options.imagefx.fxType = 'fountain';
+					myGallery01.options.imagefx.stripOrientation = 'default';
+					myGallery01.options.imagefx.stripPosition = 'reverse';
+					myGallery01.options.imagefx.stripDirection = 'default';
+					return false;
+				});
+				$("#fountain_reverse_random").click(function(){
+					myGallery01.options.imagefx.fxType = 'fountain';
+					myGallery01.options.imagefx.stripOrientation = 'default';
+					myGallery01.options.imagefx.stripPosition = 'reverse';
+					myGallery01.options.imagefx.stripDirection = 'random';
+					return false;
+				});
+				$("#fountain_flip_default").click(function(){
+					myGallery01.options.imagefx.fxType = 'fountain';
+					myGallery01.options.imagefx.stripOrientation = 'reverse';
+					myGallery01.options.imagefx.stripPosition = 'default';
+					myGallery01.options.imagefx.stripDirection = 'default';
+					return false;
+				});
+				$("#fountain_flip_random").click(function(){
+					myGallery01.options.imagefx.fxType = 'fountain';
+					myGallery01.options.imagefx.stripOrientation = 'reverse';
+					myGallery01.options.imagefx.stripPosition = 'default';
+					myGallery01.options.imagefx.stripDirection = 'random';
+					return false;
+				});
+				$("#fountain_flip_reverse").click(function(){
+					myGallery01.options.imagefx.fxType = 'fountain';
+					myGallery01.options.imagefx.stripOrientation = 'reverse';
+					myGallery01.options.imagefx.stripPosition = 'reverse';
+					myGallery01.options.imagefx.stripDirection = 'default';
+					return false;
+				});
+				$("#fountain_flip_reverse_random").click(function(){
+					myGallery01.options.imagefx.fxType = 'fountain';
+					myGallery01.options.imagefx.stripOrientation = 'reverse';
+					myGallery01.options.imagefx.stripPosition = 'reverse';
+					myGallery01.options.imagefx.stripDirection = 'random';
+					return false;
+				});
+				$("#zipper_default").click(function(){
+					myGallery01.options.imagefx.fxType = 'zipper';
+					myGallery01.options.imagefx.stripOrientation = 'default';
+					return false;
+				});
+				$("#zipper_flip").click(function(){
+					myGallery01.options.imagefx.fxType = 'zipper';
+					myGallery01.options.imagefx.stripOrientation = 'reverse';
+					return false;
+				});
+				
+				/* Transitions settings */
+				$( '#transitionsSettings #fxDelay' ).change(function () {
+					myGallery01.options.imagefx.fxDelay =  $( 'option:selected', $(this) ).text();
+				});
+				$( '#transitionsSettings #fxDuration' ).change(function () {
+					myGallery01.options.imagefx.fxDuration =  parseInt($( 'option:selected', $(this) ).text());
+				});
+
+				/*---------------------------------
+				 *	Example #02 Custom usage
+				 *---------------------------------*/
+				$(".transition-demo02").sliderkit({
+					auto:false,
+					shownavitems:4,
+					mousewheel:true,
+					counter:true,
+					panelfx:'fancy',
+					imagefx:{
+						fxType: 'zipper', // curtain, zipper, wave, fountain, random
+						fxDelay: 150, // delay between strips in ms
+						fxDuration: 800, // delay between strips in ms
+						strips: 6, // number of strips
+						stripOrientation: 'reverse', // default, reverse
+						stripPosition: 'default', // default, reverse
+						stripDirection: 'default' // default, reverse, random
+					},
+					debug:1
+				});	
+				
+			});
+		</script>
+		
+		<!-- Slider Kit styles -->
+		<link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-core.css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos.css" media="screen, projection" />
+		
+		<!-- Slider Kit compatibility -->
+		<!--[if IE 6]><link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos-ie6.css" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos-ie7.css" /><![endif]-->
+		<!--[if IE 8]><link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos-ie8.css" /><![endif]-->
+
+		<!-- Site styles -->
+		<link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-site.css" media="screen, projection" />
+		
+		<style>
+
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<div id="header-wrapper">
+				<div id="header-title"><a href="../sliderkit_en.html" title="SliderKit Homepage">Slider Kit, sliding contents with jQuery.</a></div>
+				<div class="spacer"></div>
+			</div>
+		</div>
+		<div id="page" class="inner layout-1col" style="position:relative;">
+			<div id="content" class="wide">
+				<h1 class="code-first">ImageFx add-on</h1>
+				<p>Slider Kit ImageFx add-on was built from jqFancyTransitions jQuery plugin by Ivan Lazarevic (Examples and documentation at: <a href="http://www.workshop.rs/projects/jqfancytransitions" target="_blank">http://www.workshop.rs/projects/jqfancytransitions</a>).<p>
+				<p>It provides Slider Kit images slideshows with 4 fancy transitions effects.<p>
+				<p>ImageFx only works for images.<p>
+				
+				<noscript><div class="noscript"><span class="code-sitename">Slider Kit</span> jQuery plugin requires Javascript activation.</div></noscript>
+
+				<h2>Random effects, playing with transitions</h2>
+				<p></p>
+
+				<!-- Start example #01 -->
+				<div class="sliderkit photoslider-mini transition-demo01">						
+					<div class="sliderkit-btn sliderkit-go-btn sliderkit-go-prev"><a rel="nofollow" href="#" title="Previous"><span>Previous</span></a></div>
+					<div class="sliderkit-btn sliderkit-go-btn sliderkit-go-next"><a rel="nofollow" href="#" title="Next"><span>Next</span></a></div>
+					<div class="sliderkit-panels">
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-01.jpg" alt="[Alternative text]" />
+						</div>
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-02.jpg" alt="[Alternative text]" />
+						</div>
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-03.jpg" alt="[Alternative text]" />
+						</div>
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-04.jpg" alt="[Alternative text]" />
+						</div>
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-05.jpg" alt="[Alternative text]" />
+						</div>
+					</div>
+					<div class="sliderkit-timer-wrapper">
+						<div class="sliderkit-timer"></div>
+					</div>
+				</div>
+				<!-- // end of example #01 -->
+				
+				<div class="transitions">
+					<ul>
+						<li>
+							<h3>Curtain</h3>
+							<h4>Vertical strips</h4>
+							<ul>
+								<li><a id="curtain_default" href="#">Left to right</a></li>
+								<li><a id="curtain_dirreverse" href="#">Right to left</a></li>
+								<li><a id="curtain_defaultdirauto" href="#">Auto direction</a></li>
+							</ul>
+							<h4>Horizontal strips</h4>
+							<ul>
+								<li><a id="curtain_flipdefault" href="#">Top to bottom</a></li>
+								<li><a id="curtain_flipdirreverse" href="#">Bottom to top</a></li>
+							</ul>
+						</li>
+						<li>
+							<h3>Wave</h3>
+							<h4>Vertical strips</h4>
+							<ul>
+								<li><a id="wave_default" href="#">Top to bottom, left to right</a></li>
+								<li><a id="wave_default_dirright" href="#">Top to bottom, right to left</a></li>
+								<li><a id="wave_reverse_dirleft" href="#">Bottom to top, left to right</a></li>
+								<li><a id="wave_reverse_dirright" href="#">Bottom to top, right to left</a></li>
+							</ul>
+							<h4>Horizontal strips</h4>
+							<ul>
+								<li><a id="wave_flip_dirleft" href="#">Left to right, top to bottom</a></li>
+								<li><a id="wave_flip_dirright" href="#">Left to right, bottom to top</a></li>
+								<li><a id="wave_flipreverse_dirleft" href="#">Right to left, top to bottom</a></li>
+								<li><a id="wave_flipreverse_dirright" href="#">Right to left, bottom to top</a></li>
+							</ul>
+						</li>
+						<li><h3>Fountain</h3>
+							<h4>Vertical strips</h4>
+							<ul>
+								<li><a id="fountain_default" href="#">Top to bottom</a></li>
+								<li><a id="fountain_default_random" href="#">Top to bottom, random strip order</a></li>
+								<li><a id="fountain_reverse" href="#">Bottom to top</a></li>
+								<li><a id="fountain_reverse_random" href="#">Bottom to top, random strip order</a></li>
+							</ul>
+							<h4>Horizontal strips</h4>
+							<ul>
+								<li><a id="fountain_flip_default" href="#">Left to right</a></li>
+								<li><a id="fountain_flip_random" href="#">Left to right, random strip order</a></li>
+								<li><a id="fountain_flip_reverse" href="#">Right to left</a></li>
+								<li><a id="fountain_flip_reverse_random" href="#">Right to left, random strip order</a></li>
+							</ul>
+						</li>
+						<li><h3>Zipper</h3>
+							<h4>Vertical strips</h4>
+							<ul>
+								<li><a id="zipper_default" href="#">Alternate strip position</a></li>
+							</ul>
+							<h4>Horizontal strips</h4>
+							<ul>
+								<li><a id="zipper_flip" href="#">Alternate strip position</a></li>
+							</ul>
+						</li>
+					</ul>
+				
+					<div class="spacer"></div>
+				</div>
+					
+				<div id="transitionsSettings">
+					<h3>Animation settings</h3>
+					<label>fxDelay</label><select id="fxDelay">
+						<option>50</option>
+						<option selected="selected">60</option>
+						<option>70</option>
+						<option>80</option>
+						<option>100</option>
+						<option>150</option>
+						<option>200</option>
+						<option>250</option>
+					</select> (less is faster)
+					<label>fxDuration</label><select id="fxDuration">
+						<option>100</option>
+						<option>300</option>
+						<option selected="selected">500</option>
+						<option>600</option>
+						<option>700</option>
+						<option>800</option>
+						<option>1000</option>
+						<option>1500</option>
+						<option>2000</option>
+					</select> (less is faster)
+				</div>
+	
+				<div class="code-notes">
+					<h4>Notes</h4>
+					<p><span class="code-setting">timer</span> option is set to <span class="code-value">true</span> (<a href="timer.html">Timer add-on</a> required).</p>
+				</div>
+				
+				<h2>Photo gallery with custom effect</h2>
+				<p>You can personalize the transition effect by changing strips number or delay between each strip.</p>
+				<!-- Start photosgallery-std -->
+				<div id="standardPhotosgallery" class="sliderkit photosgallery-std transition-demo02">
+					<div class="sliderkit-nav">
+						<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-prev"><a rel="nofollow" href="#" title="Previous line"><span>Previous line</span></a></div>
+						<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-next"><a rel="nofollow" href="#" title="Next line"><span>Next line</span></a></div>
+						<div class="sliderkit-btn sliderkit-go-btn sliderkit-go-prev"><a rel="nofollow" href="#" title="Previous photo"><span>Previous photo</span></a></div>
+						<div class="sliderkit-btn sliderkit-go-btn sliderkit-go-next"><a rel="nofollow" href="#" title="Next photo"><span>Next photo</span></a></div>
+						
+						<div class="sliderkit-nav-clip">
+							<ul>
+								<li><a href="#" rel="nofollow" title="[link title]"><img src="../lib/images/photos/mini/sample-01.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" rel="nofollow" title="[link title]"><img src="../lib/images/photos/mini/sample-02.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" rel="nofollow" title="[link title]"><img src="../lib/images/photos/mini/sample-03.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" rel="nofollow" title="[link title]"><img src="../lib/images/photos/mini/sample-04.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" rel="nofollow" title="[link title]"><img src="../lib/images/photos/mini/sample-05.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" rel="nofollow" title="[link title]"><img src="../lib/images/photos/mini/sample-06.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" rel="nofollow" title="[link title]"><img src="../lib/images/photos/mini/sample-07.jpg" alt="[Alternative text]" /></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="sliderkit-panels">
+
+						<div class="sliderkit-count sliderkit-count-items">
+							<span class="sliderkit-count-current"></span><span class="sliderkit-count-sep">/</span><span class="sliderkit-count-total"></span>
+						</div>
+					
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-01.jpg" alt="[Alternative text]" />
+						</div>
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-02.jpg" alt="[Alternative text]" />
+						</div>
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-03.jpg" alt="[Alternative text]" />
+						</div>
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-04.jpg" alt="[Alternative text]" />
+						</div>
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-05.jpg" alt="[Alternative text]" />
+						</div>
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-06.jpg" alt="[Alternative text]" />
+						</div>
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-07.jpg" alt="[Alternative text]" />
+						</div>
+					</div>
+				</div>
+				<!-- // end of photosgallery-std -->
+	
+				<div class="code-notes">
+					<h4>Notes</h4>
+					<p><span class="code-setting">counter</span> option is set to <span class="code-value">true</span> (<a href="counter.html">Counter add-on</a> required).</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

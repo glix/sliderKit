@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Slider Kit > Timer add-on</title>
+		<meta name="Keywords" content="slider, kit, slideshow, gallery, carousel, jquery plugin" />
+		<meta name="Description" content="Slider Kit jQuery slideshow plugin: entension, auto-scrolling timer" />
+		
+		<!-- jQuery library -->
+		<script type="text/javascript" src="../lib/js/external/_oldies/jquery-1.3.min.js"></script>
+		<!--<script type="text/javascript" src="../lib/js/external/jquery-1.6.2.min.js"></script>-->
+		
+		<!-- jQuery Plugin scripts -->
+		<script type="text/javascript" src="../lib/js/external/jquery.easing.1.3.min.js"></script>
+		<script type="text/javascript" src="../lib/js/external/jquery.mousewheel.min.js"></script>
+		
+		<!-- Slider Kit scripts -->
+		<script type="text/javascript" src="../lib/js/sliderkit/jquery.sliderkit.1.9.2.pack.js"></script>
+		<script type="text/javascript" src="../lib/js/sliderkit/addons/sliderkit.timer.1.0.pack.js"></script>
+
+		<!-- Slider Kit launch -->
+		<script type="text/javascript">
+			$(window).load(function(){ //$(window).load() must be used instead of $(document).ready() because of Webkit compatibility				
+				
+				// Photo gallery > Standard
+				$( '.photosgallery-std' ).sliderkit({
+					shownavitems:5,
+					auto:true,
+					autospeed:5000,
+					autostill:true,
+					circular:true,
+					timer:{
+						fadeout:0.7
+					}
+				});
+				
+			});	
+		</script>
+		
+		<!-- Slider Kit styles -->
+		<link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-core.css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos.css" media="screen, projection" />
+		
+		<!-- Slider Kit compatibility -->
+		<!--[if IE 6]><link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos-ie6.css" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos-ie7.css" /><![endif]-->
+		<!--[if IE 8]><link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos-ie8.css" /><![endif]-->
+
+		<!-- Site styles -->
+		<link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-site.css" media="screen, projection" />
+		
+	</head>
+	<body>
+		<div id="header">
+			<div id="header-wrapper">
+				<div id="header-title"><a href="../sliderkit_en.html" title="SliderKit Homepage">Slider Kit, sliding contents with jQuery.</a></div>
+				<div class="spacer"></div>
+			</div>
+		</div>
+		<div id="page" class="inner layout-1col">
+			<div id="content">
+				<h1 class="code-first">Timer add-on</h1>
+				
+				<noscript><div class="noscript"><span class="code-sitename">Slider Kit</span> jQuery plugin requires Javascript activation.</div></noscript>
+
+				<h2>Simple photos slideshow</h2>
+				<p></p>
+
+				<!-- Start photosgallery-std -->
+				<div class="sliderkit photosgallery-std timer-demo01">
+						
+					<div class="sliderkit-timer-wrapper">
+						<div class="sliderkit-timer"></div>
+					</div>
+						
+					<div class="sliderkit-panels">
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-01.jpg" alt="[Alternative text]" />
+						</div>
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-02.jpg" alt="[Alternative text]" />
+						</div>
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-03.jpg" alt="[Alternative text]" />
+						</div>
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-04.jpg" alt="[Alternative text]" />
+						</div>
+						<div class="sliderkit-panel">
+							<img src="../lib/images/photos/sample-05.jpg" alt="[Alternative text]" />
+						</div>
+					</div>
+				</div>
+				<!-- // end of photosgallery-std -->
+				
+				<div class="code-notes">
+					<h4>Notes</h4>
+					<ul>
+						<li><span class="code-setting">timer</span> option is set to <span class="code-value">true</span>.</li>
+						<li><span class="code-setting">autostill</span> option is set to <span class="code-value">true</span>, so auto-scrolling won't stop when the mouse is going over the slider.</li>
+						<li>If no 'timer' tag is found in the HTML, the script will generate it. But you can also place your own timer bar HTML tag manually in the slider. So you can easily custom the element, adding wrapper around and CSS background images on it.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Slider Kit > Carousels</title>
+		<meta name="Keywords" content="slider, kit, slideshow, gallery, carousel, jquery plugin" />
+		<meta name="Description" content="Slider Kit jQuery slideshow plugin: carousels examples" />
+		
+		<!-- jQuery library -->
+		<script type="text/javascript" src="../lib/js/external/_oldies/jquery-1.3.min.js"></script>
+		<!--<script type="text/javascript" src="../lib/js/external/jquery-1.6.2.min.js"></script>-->
+		
+		<!-- jQuery Plugin scripts -->
+		<script type="text/javascript" src="../lib/js/external/jquery.easing.1.3.min.js"></script>
+		<script type="text/javascript" src="../lib/js/external/jquery.mousewheel.min.js"></script>
+		
+		<!-- Slider Kit scripts -->
+		<script type="text/javascript" src="../lib/js/sliderkit/jquery.sliderkit.1.9.2.pack.js"></script>		
+
+		<!-- Slider Kit launch -->
+		<script type="text/javascript">
+			$(window).load(function(){ //$(window).load() must be used instead of $(document).ready() because of Webkit compatibility				
+
+				// Carousel > Demo #1
+				$("#carousel-demo1").sliderkit({
+					auto:false,
+					shownavitems:4,
+					start:2
+				});
+				
+				// Carousel > Demo #2
+				$(".carousel-demo2").sliderkit({
+					shownavitems:3,
+					scroll:1,
+					mousewheel:true,
+					circular:true,
+					start:2
+				});
+
+				// Carousel > Demo #3
+				$("#carousel-demo3").sliderkit({
+					auto:false,
+					shownavitems:2,
+					navscrollatend:true
+				});
+				
+				// Carousel > Continuous
+				$(".carousel-continuous").sliderkit({
+					auto:false,
+					circular:false,
+					shownavitems:5,
+					scroll:1,
+					navcontinuous: true,
+					scrollspeed: 700,
+					scrolleasing: "linear"
+				});
+				
+				// Carousel > Demo #5
+				$("#carousel-demo5").sliderkit({
+					auto:true,
+					autospeed:4000,
+					shownavitems:3,
+					circular:false,
+					fastchange:false,
+					scrolleasing:"easeOutExpo", //"easeOutBounce, easeOutBack"
+					scrollspeed:500
+				});	
+			});	
+		</script>
+		
+		<!-- Slider Kit styles -->
+		<link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-core.css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos.css" media="screen, projection" />
+		
+		<!-- Slider Kit compatibility -->	
+		<!--[if IE 6]><link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos-ie6.css" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos-ie7.css" /><![endif]-->
+		<!--[if IE 8]><link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos-ie8.css" /><![endif]-->
+
+		<!-- Site styles -->
+		<link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-site.css" media="screen, projection" />
+		
+	</head>
+	<body>
+		<div id="header">
+			<div id="header-wrapper">
+				<div id="header-title"><a href="../sliderkit_en.html" title="SliderKit Homepage">Slider Kit, sliding contents with jQuery.</a></div>
+				<div class="spacer"></div>
+			</div>
+		</div>
+		<div id="page" class="inner layout-1col">
+			<div id="content">
+				<h1 class="code-first">Carousels</h1>
+				
+				<noscript><div class="noscript"><span class="code-sitename">Slider Kit</span> jQuery plugin requires Javascript activation.</div></noscript>
+
+				<h2>Carousel demo #1</h2>
+				<p>A basic carousel with opacity effect on thumbnail (CSS). Starts on position #3 (from 0).</p>
+
+				<!-- Start carousel-demo1 -->
+				<div id="carousel-demo1" class="sliderkit carousel-demo1">
+					<div class="sliderkit-nav">
+						<div class="sliderkit-nav-clip">
+							<ul>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-01.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-02.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-03.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-04.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-05.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-06.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-07.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-08.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-09.jpg" alt="[Alternative text]" /></a></li>
+							</ul>
+						</div>
+						<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-prev"><a href="#" title="Scroll to the left"><span>Previous</span></a></div>
+						<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-next"><a href="#" title="Scroll to the right"><span>Next</span></a></div>
+					</div>
+				</div>
+				<!-- // end of carousel-demo1 -->
+				
+				<h2>Carousel demo #2</h2>
+				<p>Carousel with 1 by 1 navigation.</p>
+				<p><strong>Features: </strong>auto-scrolling, mousewheel navigation, circular. Starts on position #2 (from 0).</p>
+
+				<!-- Start carousel-demo2 -->
+				<div class="sliderkit carousel-demo2">
+					<div class="sliderkit-nav">
+						<div class="sliderkit-nav-clip">
+							<ul>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-01.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-02.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-03.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-04.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-05.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-06.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-07.jpg" alt="[Alternative text]" /></a></li>
+							</ul>
+						</div>
+						<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-prev"><a href="#" title="Scroll to the left"><span>Previous</span></a></div>
+						<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-next"><a href="#" title="Scroll to the right"><span>Next</span></a></div>
+					</div>
+				</div>				
+				<!-- // end of carousel-demo2 -->
+
+				<h2>Carousel demo #3</h2>
+				<p>The carousel scrolls if a line first or last thumbnail is clicked (<span class="code-setting">navscrollatend</span> option is set to <span class="code-value">true</span>).</p>
+				
+				<!-- Start carousel-demo3 -->
+				<div id="carousel-demo3" class="sliderkit carousel-demo1">
+					<div class="sliderkit-nav">
+						<div class="sliderkit-nav-clip">
+							<ul>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-01.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-02.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-03.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-04.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-05.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-06.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-07.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-08.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-09.jpg" alt="[Alternative text]" /></a></li>
+							</ul>
+						</div>
+						<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-prev"><a href="#" title="Scroll to the left"><span>Previous</span></a></div>
+						<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-next"><a href="#" title="Scroll to the right"><span>Next</span></a></div>
+					</div>
+				</div>
+				<!-- // end of carousel-demo3 -->
+				
+				<h2>Continuous carousel</h2>
+				<p>Carousel will keep scrolling on buttons mouseover.</p>
+
+				<!-- Start carousel-continuous -->
+				<div class="sliderkit carousel-continuous">
+					<div class="sliderkit-nav">
+						<div class="sliderkit-nav-clip">
+							<ul>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-01.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-02.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-03.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-04.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-05.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-06.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-07.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-08.jpg" alt="[Alternative text]" /></a></li>
+								<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-09.jpg" alt="[Alternative text]" /></a></li>
+							</ul>
+						</div>
+						<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-prev"><a href="#" title="Scroll to the left"><span>Previous</span></a></div>
+						<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-next"><a href="#" title="Scroll to the right"><span>Next</span></a></div>
+					</div>
+				</div>				
+				<!-- // end of carousel-continuous -->
+				
+				<div class="code-notes">
+					<h4>Notes</h4>
+					<p>To get a continuous scroll, the parameter <em class="code-setting">scrolleasing</em> must be set to <span class="code-value">"linear"</span>.</p>
+					<p>The parameter <em class="code-setting">fastchange</em> must be set to <span class="code-value">"true"</span>.</p>
+					<p>To avoid weird visual effect, the carousel shouldn't be circular.</p>
+				</div>
+				
+				<h2>Carousel with text content</h2>
+				<p>A simple example of what you can do with article excerpt content.</p>
+				
+				<!-- Start carousel-demo5 -->
+				<div id="carousel-demo5" class="sliderkit">
+					<div class="sliderkit-nav">
+						<div class="sliderkit-nav-clip">
+							<ul>
+								<li>
+									<a href="#" title=""><img src="../lib/images/photos/small/sample-01.jpg" alt="[Alternative text]" /></a>
+									<h3>Article title</h3>
+									<p>Torquent perconubia nostinec varius scelerisque conubia... <a href="#" title="" class="custom-readmore">More</a></p>
+								</li>
+								<li>
+									<a href="#" title=""><img src="../lib/images/photos/small/sample-02.jpg" alt="[Alternative text]" /></a>
+									<h3>Article title</h3>
+									<p>Torquent perconubia nostinec varius scelerisque conubia... <a href="#" title="" class="custom-readmore">More</a></p>
+								</li>
+								<li>
+									<a href="#" title=""><img src="../lib/images/photos/small/sample-03.jpg" alt="[Alternative text]" /></a>
+									<h3>Article title</h3>
+									<p>Torquent perconubia nostinec varius scelerisque conubia... <a href="#" title="" class="custom-readmore">More</a></p>
+								</li>
+								<li>
+									<a href="#" title=""><img src="../lib/images/photos/small/sample-04.jpg" alt="[Alternative text]" /></a>
+									<h3>Article title</h3>
+									<p>Torquent perconubia nostinec varius scelerisque conubia... <a href="#" title="" class="custom-readmore">More</a></p>
+								</li>
+								<li>
+									<a href="#" title=""><img src="../lib/images/photos/small/sample-05.jpg" alt="[Alternative text]" /></a>
+									<h3>Article title</h3>
+									<p>Torquent perconubia nostinec varius scelerisque conubia... <a href="#" title="" class="custom-readmore">More</a></p>
+								</li>
+								<li>
+									<a href="#" title=""><img src="../lib/images/photos/small/sample-06.jpg" alt="[Alternative text]" /></a>
+									<h3>Article title</h3>
+									<p>Torquent perconubia nostinec varius scelerisque conubia... <a href="#" title="" class="custom-readmore">More</a></p>
+								</li>
+								<li>
+									<a href="#" title=""><img src="../lib/images/photos/small/sample-07.jpg" alt="[Alternative text]" /></a>
+									<h3>Article title</h3>
+									<p>Torquent perconubia nostinec varius scelerisque conubia... <a href="#" title="" class="custom-readmore">More</a></p>
+								</li>
+							</ul>
+						</div>
+						<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-prev"><a href="#" title="Scroll to the left"><span>Previous</span></a></div>
+						<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-next"><a href="#" title="Scroll to the right"><span>Next</span></a></div>
+					</div>
+				</div>
+				<!-- // end of carousel-demo5 -->
+
+			</div>
+			<div class="spacer"></div>
+		</div>
+	</body>
+</html>

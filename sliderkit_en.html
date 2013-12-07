@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Slider Kit, sliding contents with jQuery</title>
+		<meta name="Keywords" content="slider, kit, slideshow, gallery, carousel, jquery plugin" />
+		<meta name="Description" content="Slider Kit jQuery content slideshow plugin. To build any kind of content slideshow." />
+		
+		<!-- Jquery library -->
+		<script type="text/javascript" src="lib/js/external/jquery-1.6.2.min.js"></script>
+		
+		<!-- Local add-ons -->
+		<script type="text/javascript" src="lib/js/external/jquery.ui.totop.js"></script>
+		<script type="text/javascript" src="lib/js/external/jquery.supertoc.js"></script>
+		
+		<script type="text/javascript">
+			$(window).load(function(){
+
+				// TOC
+				$( '.sliderkit-panels' ).superToc({
+					headings:"h1, h2"
+				});
+				
+				// To top plugin
+				$().UItoTop({ scrollSpeed: 200 });
+			});	
+		</script>
+		
+		<!-- Site styles -->
+		<link rel="stylesheet" type="text/css" href="lib/css/sliderkit-site.css" media="screen, projection" />
+
+		<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="lib/css/sliderkit-site-ltie8.css" /><![endif]-->
+	</head>
+	<body>
+		<div id="header">
+			<div id="header-wrapper">
+				<div id="header-title">Slider Kit, sliding contents with jQuery.</div>
+				<div id="header-lang">
+					<ul>
+						<li>EN</li>
+						<li><a href="sliderkit_fr.html" title="Afficher le site en Français">FR</a></li>
+					</ul>
+				</div>
+				<div class="spacer"></div>
+			</div>
+		</div>
+		<div id="page" class="inner home">
+		
+			<noscript><div class="noscript"><span class="code-sitename">Slider Kit</span> jQuery plugin requires Javascript activation.</div></noscript>
+				
+			<!-- Starting tabs-menu -->
+			<div class="sliderkit tabs-menu">
+				<div class="sliderkit-nav">
+					<div class="sliderkit-nav-clip">
+						<ul>
+							<li><a href="#Presentation" title="Presentation">Presentation</a></li>
+							<li><a href="#Demonstrations" title="Demonstrations">Demos</a></li>
+							<li><a href="#Documentation" title="HTML/CSS/jQuery how-to">Documentation</a></li>
+							<li><a href="#Troubleshooting">Troubleshooting</a></li>
+							<li><a href="#About">About</a></li>
+						</ul>
+						<!--
+						<div id="download">
+							<a title="Download from Google Code (opens in a new window)" href="http://code.google.com/p/sliderkit/downloads/list" class="download" target="_blank">Download v1.9.2<small>.zip | package ~1 Mo</small></a>
+						</div>
+						-->
+					</div>
+					<div class="spacer"></div>
+				</div>
+				<div class="sliderkit-panels">
+					<div class="sliderkit-panel">
+						<div class="sliderkit-panel-body">
+							<h1 id="Presentation">Presentation</h1>
+							<p>The purpose of <span class="code-sitename">Slider Kit</span> is to gather common 
+							slideshow-like jQuery functionalities (such as news sliders, photos galleries/sliders,
+							carousels, tabs menus) into one lightweight and flexible plugin combined with ready-to-use CSS skins.</p>
+							<ul>
+								<li><strong>Version:</strong> 1.9.2</li>
+								<li><strong>Author:</strong> Alan Frog, kyrielles.net</li>
+								<li><strong>Project page:</strong> <a href="http://code.google.com/p/sliderkit/" target="_blank">on Google Code</a></li>
+								<li><strong>Licence:</strong> <a title="Official GNU PL website" href="http://www.gnu.org/licenses/gpl.html" target="_blank">GNU General Public License</a></li>
+								<li><strong>First release:</strong> 2011/03/26 <strong>Last update:</strong> 2012/02/15</li>
+							</ul>
+
+							<h2>Features</h2>
+							<ul>
+								<li>Content slider with modular elements</li>
+								<li>Multiple navigation controls: buttons, mousewheel, image click, keyboard (beta)</li>
+								<li>Vertical/Horizontal navigation clip</li>
+								<li>Vertical/Horizontal panels slide</li>
+								<li>Auto scrolling / Circular scrolling</li>
+								<li>Fading and sliding transitions effects</li>
+								<li>Easing on transitions</li>
+								<li>Add-ons: slides counter, timer bar, delay captions, images transitions effects</li>
+								<li><span class="code-sitename">Slider Kit</span> generates a minimum of inline CSS. The whole skin is CSS-made</li>
+								<li>Light weight: 9 Ko (packed)</li>
+							</ul>
+							
+							<h2>Compatibility</h2>
+							<h3>Browsers</h3>
+							<ul>
+								<li>Internet Explorer 9: yes</li>
+								<li>Internet Explorer 8: yes</li>
+								<li>Internet Explorer 7: yes</li>
+								<li>Internet Explorer 6: yes</li>
+								<li>Firefox: yes (tested on v3.6.1 &amp; v4/v5)</li>
+								<li>Chrome: yes (tested on v9.0.597.107)</li>
+								<li>Safari: yes (tested on v5.0.2)</li>
+								<li>Opera: yes (tested on v11.01)</li>
+							</ul>
+							<h3>jQuery</h3>
+							<p>Some bug could happen using mousewheel under jQuery v1.7.1.</p>
+
+							<h2>Version history</h2>
+							<h3>Version 1.9.2</h3>
+							<ul>
+								<li>Minor bugfix for pagination (extending functionality)</li>
+							</ul>
+							<h3>Version 1.9.1</h3>
+							<ul>
+								<li>Minor bugfix on carousel buttons</li>
+							</ul>
+							<h3>Version 1.9</h3>
+							<ul>
+								<li>'Imagefx' add-on</li>
+								<li>'DelayCaptions' bugfix</li>
+							</ul>
+							<h3>Version 1.8</h3>
+							<ul>
+								<li>'Timer' add-on</li>
+								<li>Add-ons bugfix</li>
+								<li>'autostill' option added</li>
+							</ul>
+							<h3>Version 1.7.1</h3>
+							<ul>
+								<li>Add-ons improvements</li>
+							</ul>
+							<h3>Version 1.7</h3>
+							<ul>
+								<li>Add-ons functionnality</li>
+								<li>New add-ons: 'Counter' and 'DelayCaptions'</li>
+							</ul>
+							<h3>Version 1.6</h3>
+							<ul>
+								<li>'navpanelautoswitch' option added</li>
+							</ul>
+							<h3>Version 1.5.1</h3>
+							<ul>
+								<li>bugfix about jQuery selector</li>
+							</ul>
+							<h3>Version 1.5</h3>
+							<ul>
+								<li>'start' option bug fixed</li>
+								<li>Extending demo added</li>
+								<li>Lightbox demo added</li>
+							</ul>
+							<h3>Version 1.4</h3>
+							<ul>
+								<li>Minimal photo gallery added</li>
+								<li>Small corrections on javascript code</li>
+							</ul>
+							<h3>Version 1.3</h3>
+							<ul>
+								<li>Continuous carousel added</li>
+							</ul>
+							<h3>Version 1.2</h3>
+							<ul>
+								<li>Panel slide transition improved</li>
+								<li>Sliding tabs menu demo added</li>
+								<li>FR version added</li>
+							</ul>
+							<h3>Version 1.1</h3>
+							<ul>
+								<li>Menu demo page added</li>
+								<li>Corrections on demos pages</li>
+							</ul>
+						</div>
+					</div>
+					<div class="sliderkit-panel">
+						<div class="sliderkit-panel-body">
+							<h1 id="Demonstrations">Demonstrations</h1>
+							
+							<h2>Photos sliders, galleries and carousels</h2>
+							<ul class="sub">
+								<li><a href="demos/photos-sliders.html" target="_blank">Photos sliders</a></li>
+								<li><a href="demos/photos-sliders2.html" target="_blank">Photos sliders #2</a></li>
+								<li><a href="demos/photos-galleries.html" target="_blank">Photos galleries</a></li>
+								<li><a href="demos/carousels.html" target="_blank">Carousels</a></li>
+								<li><a href="demos/slideshows.html" target="_blank">Slideshows</a></li>
+							</ul>
+							<h2>Sliding systems with menus</h2>
+							<ul class="sub">
+								<li><a href="demos/news-sliders.html" target="_blank">News sliders</a></li>
+								<li><a href="demos/tabs.html" target="_blank">Tabs menus</a></li>
+								<li><a href="demos/content-sliders.html" target="_blank">Content sliders</a></li>
+								<li><a href="demos/menus.html" target="_blank">Simple menus</a></li>
+							</ul>
+							<h2>Slider Kit addons</h2>
+							<ul class="sub">
+								<li><a href="demos/counter.html" target="_blank">Counter</a></li>
+								<li><a href="demos/delaycaptions.html" target="_blank">DelayCaptions</a></li>
+								<li><a href="demos/timer.html" target="_blank">Timer</a></li>
+								<li><a href="demos/imagefx.html" target="_blank">ImageFx</a></li>
+							</ul>
+							<h2>To go further</h2>
+							<ul class="sub">
+								<li><a href="demos/lightbox.html" target="_blank">Using lightbox</a></li>
+								<li><a href="demos/extending.html" target="_blank">Extending the plugin</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="sliderkit-panel">
+						<div class="sliderkit-panel-body">
+							<h1 id="Documentation">Documentation</h1>
+							<p>As many jQuery plugins, <span class="code-sitename">Slider Kit</span> is a subtle combination of HTML, CSS and jQuery.
+							The jQuery itself won't do any design or CSS. So you'll need to work on a CSS skin to get the design you want.</p>
+							<p>But first, let's see some HTML.</p>
+
+							<h2>HTML</h2>
+
+							<h3 id="htmlelements">HTML elements</h3>
+							<img src="lib/images/doc/doc-elements.jpg" />
+							<h4>Slider container</h4>
+							<div class="code-block">
+								<p>CSS class name: <span class="code-classname">[cssprefix]</span>.</p>
+								<p>This is the main container. It must have defined width and height values in the CSS. Because all of its child tags are in absolute position.</p>
+								<h4>Content panel</h4>
+								<p>CSS class name: <span class="code-classname">[cssprefix]-panel</span>.</p>
+								<p>This is the sliding part. The content can be anything: images, text, news, etc.</p>
+								<h4>Previous button</h4>
+								<p>CSS class name: <span class="code-classname">[cssprefix]-go-btn [cssprefix]-go-prev</span>.</p>
+								<p>This button will slide to the previous item. It can be placed anywhere inside the main container.</p>
+								<h4>Next button</h4>
+								<p>CSS class name: <span class="code-classname">[cssprefix]-go-btn [cssprefix]-go-next</span>.</p>
+								<p>This button will slide to the next item. It can be placed anywhere inside the main container.</p>
+								<h4>Caption/Text-box</h4>
+								<p>CSS class name: <span class="code-classname">[cssprefix]-panel-textbox</span>.</p>
+								<p>It is mostly used over photos. It can be placed anywhere over the panel area.</p>
+								<h4>Nav/Carousel</h4>
+								<p>CSS class name: <span class="code-classname">[cssprefix]-nav</span>.</p>
+								<p>This block contains navigation thumbnails. Thumbnail content can be anything, text or image.</p>
+								<h4>Nav previous button</h4>
+								<p>CSS class name: <span class="code-classname">[cssprefix]-nav-btn [cssprefix]-nav-prev</span>.</p>
+								<p>This button will scroll the nav bar to the right. It must be placed in the nav container.</p>
+								<h4>Nav next button</h4>
+								<p>CSS class name: <span class="code-classname">[cssprefix]-nav-btn [cssprefix]-nav-next</span>.</p>
+								<p>This button will scroll the nav bar to the left. It must be placed in the nav container.</p>
+							</div>
+							<div class="code-notes">
+								<p><span class="code-classname">[cssprefix]</span> default value is "sliderkit". You can replace it with your own value.</p>
+							</div>
+							
+							<h3>HTML code</h3>
+							<p>Here is a representative	HTML structure to be used with <span class="code-sitename">Slider Kit</span>:</p>
+							<div class="code-pre">
+								<span class="code-comment">&lt;!-- Main container --&gt;</span><br />
+								&lt;div class=&quot;<span class='code-classname'>sliderkit</span>&quot;&gt;<br />
+								<br />
+								<span class="code-comment">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Nav container --&gt;</span><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-nav</span>&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;<br />
+								<span class="code-comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Nav clip --&gt;</span><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-nav-clip</span>&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot; rel=&quot;nofollow&quot; title=&quot;[link title]&quot;&gt;~content&lt;/a&gt;&lt;/li&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot; rel=&quot;nofollow&quot; title=&quot;[link title]&quot;&gt;~content&lt;/a&gt;&lt;/li&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot; rel=&quot;nofollow&quot; title=&quot;[link title]&quot;&gt;~content&lt;/a&gt;&lt;/li&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot; rel=&quot;nofollow&quot; title=&quot;[link title]&quot;&gt;~content&lt;/a&gt;&lt;/li&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+								<span class="code-comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Nav buttons --&gt;</span><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-nav-btn sliderkit-nav-prev</span>&quot;&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;#&quot; title=&quot;Previous line&quot;&gt;&lt;span&gt;Previous&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-nav-btn sliderkit-nav-next</span>&quot;&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;#&quot; title=&quot;Next line&quot;&gt;&lt;span&gt;Next&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<span class="code-comment">&lt;!-- // end of Nav container --&gt;</span><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;<br />
+								<span class="code-comment">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Panels container --&gt;</span><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-panels</span>&quot;&gt;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;<br />
+								<span class="code-comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Go buttons --&gt;</span><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-go-btn sliderkit-go-prev</span>&quot;&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;#&quot; title=&quot;Previous&quot;&gt;&lt;span&gt;Previous&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-go-btn sliderkit-go-next</span>&quot;&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;#&quot; title=&quot;Next&quot;&gt;&lt;span&gt;Next&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;<br />
+								<br />
+								<span class="code-comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Panel divs --&gt;</span><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-panel</span>&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~content<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-panel</span>&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~content<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-panel</span>&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~content<br />
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Place caption textbox here if needed --&gt;</span><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-panel-textbox</span>&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-panel-text</span>&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Caption title&lt;/h4&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-panel-overlay</span>&quot;&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+								<br />								
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<span class="code-comment">&lt;!-- // end of Panels container --&gt;</span><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;<br />
+								&lt;/div&gt;<span class="code-comment">&lt;!-- // end of Main container --&gt;</span>
+							</div>
+							<div class="code-notes">
+								<ul>
+									<li>The HTML code is flexible: you can use just the carousel, or just the panels. Buttons and captions are optional.</li>
+									<li>The 'go' buttons (<span class='code-classname'>sliderkit-go-btn</span>) can be placed anywhere in the main container.</li>
+								</ul>
+							</div>
+							
+							<h2>CSS</h2>
+							<h3>Core styles</h3>
+							<p>The <span class="code-sitename">Slider Kit</span> core CSS file is <span class="code-filename">sliderkit-core.css</span>.</p>
+							<p>It is required to make the plugin work properly. Of course you can paste it in your own CSS file and adapt it if needed.</p>
+							
+							<h3>Skinning</h3>
+							<p>In addition to the core CSS, you have to build a CSS skin to get the design you want.</p>
+							<p>To help you in this hero quest, I wrote several CSS skins examples (check the demos pages to see them in action).</p>								
+							<p>The demos CSS file is <span class="code-filename">sliderkit-demos.css</span>. Feel free to explore this file and take what you need.</p>
+							<h4>Compatibility</h4>
+							<p>For the sake of cross-browser compatibility, I added 3 CSS files for Internet Explorers (mainly for opacity and transparency problems):</p>
+							<ul>
+								<li><span class="code-filename">sliderkit-demos-ie6.css</span>.</li>
+								<li><span class="code-filename">sliderkit-demos-ie7.css</span>.</li>
+								<li><span class="code-filename">sliderkit-demos-ie8.css</span>.</li>
+							</ul>							
+							<h4>CSS advices</h4>
+							<ul>
+								<li>Width and height values have to be set for the main container.</li>
+								<li>Nav &lt;li&gt; tag margin/padding values must be set in pixels.</li>
+							</ul>
+							<h3>In the &lt;head&gt; section of the HTML page:</h3>
+							<div class="code-pre">
+								<span class="code-comment">&lt;!-- Widget styles --&gt;</span><br />
+								&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../css/sliderkit-core.css&quot; media=&quot;screen, projection&quot; /&gt;<br />
+								&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../css/sliderkit-demos.css&quot; media=&quot;screen, projection&quot; /&gt;<br />
+								<br />
+								<span class="code-comment">&lt;!-- Compatibility fix --&gt;</span><br />
+								&lt;!--[if IE 6]&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../css/sliderkit-demos-ie6.css&quot; /&gt;<br />
+								&lt;![endif]--&gt;<br />
+								<br />
+								&lt;!--[if IE 7]&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../css/sliderkit-demos-ie7.css&quot; /&gt;<br />
+								&lt;![endif]--&gt;<br />
+								<br />
+								&lt;!--[if IE 8]&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../css/sliderkit-demos-ie8.css&quot; /&gt;<br />
+								&lt;![endif]--&gt;
+							</div>							
+							
+							<h2>Javascript</h2>
+							
+							<h3>Library</h3>
+							<p>The main javascript file is currently <span class="code-filename">jquery.sliderkit.1.9.2.pack.js</span> (packed).</p>
+							<h4>You can optionally use jQuery add-ons:</h4>
+							<ul>
+								<li><span class="code-filename">jquery.easing.1.3.min.js</span>, for easing effects on transitions. Check the <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">easing plugin homepage</a>.</li>
+								<li><span class="code-filename">jquery.mousewheel.min.js</span>, for mousewheel navigation. Check the <a href="http://brandonaaron.net/code/mousewheel/demos" target="_blank">Brandon Aaron website</a>.</li>
+							</ul>
+							<h4>Or <span class="code-sitename">Slider Kit</span> add-ons:</h4>
+							<ul>
+								<li><span class="code-filename">sliderkit.counter.js</span>, to display items counter.</li>
+								<li><span class="code-filename">sliderkit.delaycaptions.js</span>, to delay and animate captions.</li>
+								<li><span class="code-filename">sliderkit.timer.js</span>.</li>
+								<li><span class="code-filename">sliderkit.imagefx.js</span>, for fancy images transitions.</li>
+							</ul>
+							<p>Check the <a href="#availableaddons">available add-ons</a>.</p>
+							
+							<h3>Usage</h3>
+							<h4>In the &lt;head&gt; section of the HTML page:</h4>
+							<div class="code-pre">
+								<span class="code-comment">&lt;!-- jQuery library --&gt;</span><br />
+								&lt;script type=&quot;text/javascript&quot; src=&quot;your_js_path/jquery-1.6.2.min.js&quot;&gt;&lt;/script&gt;<br />
+								<br />
+								<span class="code-comment">&lt;!-- jQuery add-ons (optional) --&gt;</span><br />
+								&lt;script type=&quot;text/javascript&quot; src=&quot;your_js_path/jquery.easing.1.3.min.js&quot;&gt;&lt;/script&gt;<br />
+								&lt;script type=&quot;text/javascript&quot; src=&quot;your_js_path/jquery.mousewheel.min.js&quot;&gt;&lt;/script&gt;
+								<br />
+								<br />
+								<span class="code-comment">&lt;!-- Slider Kit core --&gt;</span><br />
+								&lt;script type=&quot;text/javascript&quot; src=&quot;your_js_path/jquery.sliderkit.1.9.2.pack.js&quot;&gt;&lt;/script&gt;<br />
+								<br />
+								<span class="code-comment">&lt;!-- Slider Kit add-ons (optional) --&gt;</span><br />
+								&lt;script type=&quot;text/javascript&quot; src=&quot;your_js_path/sliderkit.counter.js&quot;&gt;&lt;/script&gt;<br />
+								&lt;script type=&quot;text/javascript&quot; src=&quot;your_js_path/sliderkit.delaycaptions.js&quot;&gt;&lt;/script&gt;<br />
+								&lt;script type=&quot;text/javascript&quot; src=&quot;your_js_path/sliderkit.timer.js&quot;&gt;&lt;/script&gt;<br />
+								&lt;script type=&quot;text/javascript&quot; src=&quot;your_js_path/sliderkit.imagefx.js&quot;&gt;&lt;/script&gt;<br />
+								<br />
+								<span class="code-comment">&lt;!-- Slider Kit execution --&gt;</span><br />
+								&lt;script type=&quot;text/javascript&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;$(window).load(function(){<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;.anytagselector&quot;).sliderkit();<br />
+									<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+								&lt;/script&gt;
+							</div>
+							<h4>You can define the parameters of the plugin:</h4>
+							<div class="code-pre">
+								<span class="code-comment">&lt;!-- Slider Kit execution --&gt;</span><br />
+								&lt;script type=&quot;text/javascript&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;$(window).load(function(){<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;.anytagselector&quot;).sliderkit({<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">shownavitems:</em><em class="code-value">5</em>,<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">auto:</em><em class="code-value">false</em><br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+									<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+								&lt;/script&gt;
+							</div>
+							<p>Check the 'Options' section below.</p>
+											
+							<h3>Options</h3>				
+							<h4>cssprefix</h4>
+							<p><span class="setting-type">(string)</span> <span class="setting-value">default is <em>"sliderkit"</em>.</span> 
+							<span class="setting-desc">The prefix to use on every CSS class names.</span></p>
+							<h4>start</h4>
+							<p><span class="setting-type">(int)</span> <span class="setting-value">default is <em>0</em>.</span> 
+							<span class="setting-desc">Set the start position. First is 0.</span></p>
+							<h4>auto</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>true</em>.</span> 
+							<span class="setting-desc">Activate auto-scrolling.</span></p>
+							<h4>autospeed</h4>
+							<p><span class="setting-type">(int)</span> <span class="setting-value">default is <em>4000</em>.</span> 
+							<span class="setting-desc">Set the auto-scrolling speed (ms).</span></p>
+							<h4>autostill (from v1.8)</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is: <em>false</em>.</span> 
+							<span class="setting-desc">If set to true, the auto-scrolling won't stop on panels mouseover.</span></p>
+							<h4>mousewheel</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">Activate the mousewheel navigation.</span></p>
+							<h4>keyboard</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">Activate the keyboard navigation. Very basic for now (left/right arrows only).</span></p>
+							<h4>circular</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">Activate the infinite nav scroll.</span></p>
+							<h4>shownavitems</h4>
+							<p><span class="setting-type">(int)</span> <span class="setting-value">default is <em>5</em>.</span> 
+							<span class="setting-desc">Defines how many thumbnails to display in the nav clip.</span></p>
+							<h4>navitemshover</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">If set the panels will slide on nav thumbnails mouseover (by default panels slide on click).</span></p>
+							<h4>navclipcenter</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">Defines if the nav clip must be center-aligned in the nav container.</span></p>
+							<h4>navcontinuous (from v1.3)</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">If set to true, will make the carousel scroll continuously (use this option with a "linear" scrolleasing).</span></p>
+							<h4>navscrollatend (from v1.5)</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">If set to 'true', will make the carousel scroll if a line first or last thumbnail is clicked.</span></p>
+							<h4>navpanelautoswitch (from v1.6)</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>true</em>.</span> 
+							<span class="setting-desc">If set to 'false', will make the navbar scroll without switching panels.</span></p>
+							<h4>navfx</h4>
+							<p><span class="setting-type">(string)</span> <span class="setting-value">default is <em>"sliding"</em>.</span> 
+							<span class="setting-desc">Define the carousel transition effect. Possible values: "sliding", "none"</span></p>
+							<h4>navfxbefore (from v1.7)</h4>
+							<p><span class="setting-type">(function)</span> <span class="setting-value">default is: <em>function(){}</em>.</span> 
+							<span class="setting-desc">The function called before the nav transition start.</span></p>
+							<h4>navfxafter (from v1.7)</h4>
+							<p><span class="setting-type">(function)</span> <span class="setting-value">default is: <em>function(){}</em>.</span> 
+							<span class="setting-desc">The function called before the nav transition start.</span></p>
+							<h4>scroll</h4>
+							<p><span class="setting-type">(int)</span> <span class="setting-value">default is <em>equal to 'shownavitems' option value</em>.</span> 
+							<span class="setting-desc">Defines how many nav thumbnails must be scrolled when nav buttons are clicked. Can't be greater than the 'shownavitems' option value.</span></p>
+							<h4>scrollspeed</h4>
+							<p><span class="setting-type">(int)</span> <span class="setting-value">default is <em>600</em>.</span> 
+							<span class="setting-desc">Set the nav scroll speed (ms).</span></p>
+							<h4>scrolleasing</h4>
+							<p><span class="setting-type">(string)</span> <span class="setting-value">default is <em>"swing"</em>.</span> 
+							<span class="setting-desc">Add an easing effect to the nav slide transition.<br />Default jQuery easing functions are "swing" or "linear". Other effects can be added with the jQuery easing plugin: <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">http://gsgd.co.uk/sandbox/jquery/easing/</a>.</span></p>
+							<h4>panelfx</h4>
+							<p><span class="setting-type">(string)</span> <span class="setting-value">default is <em>"fading"</em>.</span> 
+							<span class="setting-desc">Define the panels transition effect. Possible values: "fading", "sliding", "none" + (from v1.9) "fancy" => see the 'imagefx' option below.</span></p>
+							<h4>panelfxspeed</h4>
+							<p><span class="setting-type">(int)</span> <span class="setting-value">default is <em>700</em>.</span> 
+							<span class="setting-desc">Set the panel slide transition effect speed (ms).</span></p>
+							<h4>panelfxeasing</h4>
+							<p><span class="setting-type">(string)</span> <span class="setting-value">default is <em>"swing"</em>.</span> 
+							<span class="setting-desc">Add an easing effect to the panel slide transition.<br />Default jQuery easing functions are "swing" or "linear". Other effects can be added with the jQuery easing plugin: <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">http://gsgd.co.uk/sandbox/jquery/easing/</a></span></p>
+							<h4>panelfxfirst (from v1.5)</h4>
+							<p><span class="setting-type">(string)</span> <span class="setting-value">default is <em>"none"</em>.</span> 
+							<span class="setting-desc">Add a transition effect on the first displayed item. There are only 2 possible values for the moment: "fading" or "none".</p>			
+							<h4>panelfxbefore</h4>
+							<p><span class="setting-type">(function)</span> <span class="setting-value">default is <em>function(){}</em>.</span> 
+							<span class="setting-desc">The function called before the panel transition start.</span></p>
+							<h4>panelfxafter</h4>
+							<p><span class="setting-type">(function)</span> <span class="setting-value">default is <em>function(){}</em>.</span> 
+							<span class="setting-desc">The function called when panel transition is over.</span></p>
+							<h4>panelbtnshover</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">If set to true, go buttons will fade in/out on panel mouseover.</span></p>
+							<h4>panelclick</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">Activate the 1-click navigation.</span></p>
+							<h4>verticalnav</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">Set the nav clip direction to vertical.</span></p>
+							<h4>verticalslide</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">Set the panel sliding direction to vertical (only if "panelfx" is defined as "sliding").</span></p>
+							<h4>tabs</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">Required to build a tabs menu.</span></p>
+							<h4>freeheight</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">Use panels with no fixed height (in this case, 'panelfx' value can't be "sliding").</span></p>
+							<h4>fastchange</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>true</em>.</span> 
+							<span class="setting-desc">By default the user can slide to the next content even if the slider is still running. You can stop this behavior by setting the "fastchange" option to false.</span></p>
+							<h4>counter (from v1.7.1)</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">Activates the <span class="code-sitename">Slider Kit</span> '<a href="demos/counter.html">Counter</a>' add-on.</span></p>
+							<h4>delaycaptions (from v1.7.1)</h4>
+							<p><span class="setting-type">(boolean/array)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">Activates the <span class="code-sitename">Slider Kit</span> '<a href="demos/delaycaptions.html">DelayCaption</a>' add-on.</span></p>
+							<h4>timer (from v1.8)</h4>
+							<p><span class="setting-type">(boolean/array)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">Activates the <span class="code-sitename">Slider Kit</span> '<a href="demos/timer.html">Timer</a>' add-on.</span></p>
+							<h4>imagefx (from v1.9)</h4>
+							<p><span class="setting-type">(array)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc"><span class="code-sitename">Slider Kit</span> '<a href="demos/imagefx.html">ImageFx</a>' add-on parameters. Use it with 'fancy' panelfx transition.</span></p>
+							<h4>debug</h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is <em>false</em>.</span> 
+							<span class="setting-desc">If set to true, the script will stop on errors and return error code values. Check documentation.</span></p>
+
+							<h2 id="availableaddons">Slider Kit add-ons</h2>
+							<p>From version 1.7, in order to keep a lightweight plugin core, new <span class="code-sitename">Slider Kit</span> functionalities are developped as add-ons.</p>
+							
+							<h3>Usage</h3>
+							<h4>1. Check the HTML code to use with each plugin (see following add-ons sections)</h4>
+							<h4>2. Call the add-on jQuery file</h4>
+							<p>Let's take the Counter add-on example:</p>
+							<div class="code-pre">								
+								<span class="code-comment">&lt;!-- Slider Kit core --&gt;</span><br />
+								&lt;script type=&quot;text/javascript&quot; src=&quot;your_js_path/jquery.sliderkit.1.9.2.pack.js&quot;&gt;&lt;/script&gt;<br /><br />
+									<span class="code-comment">&lt;!-- Slider Kit add-ons --&gt;</span><br />
+								&lt;script type=&quot;text/javascript&quot; src=&quot;your_js_path/sliderkit.counter.js&quot;&gt;&lt;/script&gt;<br />
+								<br />
+							</div>
+							
+							<h4>3. You can now declare the add-on option in the plugin parameters</h4>
+							<div class="code-pre">
+								<span class="code-comment">&lt;!-- Slider Kit launching --&gt;</span><br />
+								&lt;script type=&quot;text/javascript&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;$(window).load(function(){<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;.anytagselector&quot;).sliderkit({<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">counter:</em><em class="code-value">true</em><br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+									<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+								&lt;/script&gt;
+							</div>
+							
+							<h3>'Counter' add-on</h3>
+							<p>This add-on will handle panel and/or lines counters. See <a href="demos/counter.html" target="_blank">demo page</a> for details.</p>
+							<h4>HTML code to use in the slider</h4>
+							<div class="code-pre">
+								<span class="code-comment">&lt;!-- Lines counter --&gt;</span><br />
+								&lt;div class="<span class="code-classname">sliderkit-count sliderkit-count-lines</span>"&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;page &lt;span class="<span class="code-classname">sliderkit-count-current</span>"&gt;&lt;/span&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="sliderkit-count-sep"&gt;/&lt;/span&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="<span class="code-classname">sliderkit-count-total</span>"&gt;&lt;/span&gt;<br />
+								&lt;/div&gt;<br />
+								<br />
+								<span class="code-comment">&lt;!-- Panels counter --&gt;</span><br />
+								&lt;div class="<span class="code-classname">sliderkit-count sliderkit-count-items</span>"&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="<span class="code-classname">sliderkit-count-current</span>"&gt;&lt;/span&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="sliderkit-count-sep"&gt;/&lt;/span&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="<span class="code-classname">sliderkit-count-total</span>"&gt;&lt;/span&gt;<br />
+								&lt;/div&gt;<br />
+							</div>
+							<div class="code-notes">
+								<ul>
+									<li>The counter blocks can be placed anywhere in the main container.</li>
+									<li>The <span class="code-classname">sliderkit-count-sep</span> class is optional.</li>
+								</ul>
+							</div>
+							
+							<h3>'DelayCaptions' add-on</h3>
+							<p>This add-on will make the capion textboxes slide over the panels area. See <a href="demos/delaycaptions.html" target="_blank">demo page</a> for details.</p>
+
+							<h4>HTML code</h4>
+							<div class="code-pre">
+								&lt;div class=&quot;<span class='code-classname'>sliderkit-panel</span>&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;a title=&quot;[title]&quot; href=&quot;#&quot;&gt;&lt;img alt=&quot;[Alternative text]&quot; src=&quot;your_image.jpg&quot;&gt;&lt;/a&gt;<br />
+								<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-panel-textbox</span>&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-panel-text</span>&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Caption title&lt;/h4&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;<span class='code-classname'>sliderkit-panel-overlay</span>&quot;&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+								<br/>
+								&lt;/div&gt;
+							</div>
+							<div class="code-notes">
+								<ul>
+									<li>Caption text boxes must be placed in the panel containers.</li>
+									<li>Text boxes elements must have specified width/height values in the CSS</li>
+								</ul>
+							</div>
+							<h4>In the &lt;head&gt; section of the HTML page:</h4>
+							<div class="code-pre">
+								<span class="code-comment">&lt;!-- Slider Kit launching --&gt;</span><br />
+								&lt;script type=&quot;text/javascript&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;$(window).load(function(){<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;.anytagselector&quot;).sliderkit({<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">delaycaptions:</em>{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">delay:</em><em class="code-value">400,</em><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">position:</em><em class="code-value">"bottom",</em><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">transition:</em><em class="code-value">"sliding",</em><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">duration:</em><em class="code-value">300,</em><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">easing:</em><em class="code-value">"easeOutExpo"</em><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">hold:</em><em class="code-value">true</em><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+								&lt;/script&gt;
+							</div>
+							<h4>Available options</h4>
+							<h4>delay</h4>
+							<p><span class="setting-type">(int)</span> <span class="setting-value">default is: <em>400</em>.</span> 
+							<span class="setting-desc">Textbox delay value (ms).</span></p>
+							<h4>position</h4>
+							<p><span class="setting-type">(string)</span> <span class="setting-value">default is: <em>"bottom"</em>.</span> 
+							<span class="setting-desc">Only for "sliding" transition: set the slide starting position. Possible values: "top", "right", "bottom", "left".</span></p>
+							<h4>transition</h4>
+							<p><span class="setting-type">(string)</span> <span class="setting-value">default is: <em>"sliding"</em>.</span> 
+							<span class="setting-desc">Transition type. Possible values: "sliding", "fading".</span></p>
+							<h4>duration</h4>
+							<p><span class="setting-type">(int)</span> <span class="setting-value">default is: <em>300</em>.</span> 
+							<span class="setting-desc">Transition duration (ms).</span></p>
+							<h4>easing</h4>
+							<p><span class="setting-type">(string)</span> <span class="setting-value">default is: <em>"linear"</em>.</span> 
+							<span class="setting-desc">Optional easing on transition effect.</span></p>
+							<h4>hold (v1.8) <span class="code-depreciated">depreciated from v1.9</span></h4>
+							<p><span class="setting-type">(boolean)</span> <span class="setting-value">default is: <em>false</em>.</span> 
+							<span class="setting-desc">If set to true, the slider won't switch until the caption animation is finished.</span></p>
+							
+							<h3>'Timer' add-on</h3>
+							<p>While auto-scrolling, this add-on will display a progress bar illustrating the time remaining before the next panel appears. See the <a href="demos/timer.html" target="_blank">demo page</a>.</p>
+							<h4>HTML code (outside of the panels container)</h4>
+							<div class="code-pre">
+								<span class="code-comment">&lt;!-- Default 'timer' tag --&gt;</span><br />
+								&lt;div class="<span class="code-classname">sliderkit-timer</span>"&gt;&lt;/div&gt;<br />
+								<br />
+								<span class="code-comment">&lt;!-- Custom 'timer' tag example --&gt;</span><br />
+								&lt;div class="<span class="code-classname">sliderkit-timer-wrapper</span>"&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="code-classname">sliderkit-timer</span>"&gt;&lt;/div&gt;<br />
+								&lt;/div&gt;
+							</div>
+							<div class="code-notes">
+								<ul>
+									<li>If no 'timer' HTML tag is found, the script will generate the default one.</li>
+									<li>If you go with your own timer block, make sure you place it outside of the panels container ('sliderkit-panels').</li>
+								</ul>
+							</div>
+							<h4>In the &lt;head&gt; section of the HTML page:</h4>
+							<div class="code-pre">
+								<span class="code-comment">&lt;!-- Slider Kit launching --&gt;</span><br />
+								&lt;script type=&quot;text/javascript&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;$(window).load(function(){<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;.anytagselector&quot;).sliderkit({<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">timer:</em>{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">fadeout:</em><em class="code-value">0.2</em><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+								&lt;/script&gt;
+							</div>
+							<h4>Available options</h4>
+							<h4>fadeout</h4>
+							<p><span class="setting-type">(float)</span> <span class="setting-value">default is: <em>1</em>.</span> 
+							<span class="setting-desc">Opacity value for the animation fadeout effect. Possible values: float numbers between 0 and 1. Ex: 0.2.</span></p>
+							
+							<h3>'ImageFx' add-on</h3>
+							<p>Slider Kit ImageFx add-on was built from jqFancyTransitions jQuery plugin by Ivan Lazarevic (Examples and documentation at: <a href="http://www.workshop.rs/projects/jqfancytransitions" target="_blank">http://www.workshop.rs/projects/jqfancytransitions</a>).<p>
+							<p>It provides Slider Kit images slideshows with 4 fancy transitions effects.<p>
+							<p>ImageFx only works for images. See the <a href="demos/imagefx.html" target="_blank">demo page</a><p>
+							<h4>In the &lt;head&gt; section of the HTML page:</h4>
+							<div class="code-pre">
+								<span class="code-comment">&lt;!-- Slider Kit launching --&gt;</span><br />
+								&lt;script type=&quot;text/javascript&quot;&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;$(window).load(function(){<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;!-- Simple usage --&gt;</span><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;.anytagselector&quot;).sliderkit({<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">panelfx:</em> <em class="code-value">'fancy'</em>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">imagefx:</em> {<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">fxType:</em> <em class="code-value">'zipper'</em><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;!-- Full usage --&gt;</span><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;.anytagselector&quot;).sliderkit({<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">panelfx:</em> <em class="code-value">'fancy'</em>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">imagefx:</em> {<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">fxType:</em> <em class="code-value">'curtain'</em>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">fxDelay:</em> <em class="code-value">50</em>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">fxDuration:</em> <em class="code-value">1000</em>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">strips:</em> <em class="code-value">8</em>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">stripOrientation:</em> <em class="code-value">'reverse'</em>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">stripPosition:</em> <em class="code-value">'default'</em>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em class="code-setting">stripDirection:</em> <em class="code-value">'default'</em><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+								&lt;/script&gt;
+							</div>
+							<h4>Available options</h4>
+							<h4>fxType</h4>
+							<p><span class="setting-type">(string)</span> <span class="setting-value">default is: <em>'curtain'</em>.</span> 
+							<span class="setting-desc">Image transition type. Available values: 'curtain', 'zipper', 'wave', 'fountain', 'random'.</span></p>
+							<h4>fxDelay</h4>
+							<p><span class="setting-type">(int)</span> <span class="setting-value">default is: <em>60</em>.</span> 
+							<span class="setting-desc">Delay between each strip, in ms. The higher value, the slower is the animation.</span></p>
+							<h4>fxDuration</h4>
+							<p><span class="setting-type">(int)</span> <span class="setting-value">default is: <em>500</em>.</span> 
+							<span class="setting-desc">Strip animation duration, in ms. The higher value, the slower is the animation.</span></p>
+							<h4>strips</h4>
+							<p><span class="setting-type">(int)</span> <span class="setting-value">default is: <em>10</em>.</span> 
+							<span class="setting-desc">Number of strips.</span></p>
+							<h4>stripOrientation</h4>
+							<p><span class="setting-type">(string)</span> <span class="setting-value">default is: <em>'default'</em>.</span> 
+							<span class="setting-desc">Available values: 'default' (vertical strips), or 'reverse' (horizontal strips).</span></p>
+							<h4>stripPosition</h4>
+							<p><span class="setting-type">(string)</span> <span class="setting-value">default is: <em>'default'</em>.</span> 
+							<span class="setting-desc">Start position. Available values: 'default' (default position is 'top' if 'stripOrientation' is vertical, 'left' if horizontal), or 'reverse' (reverse position is 'bottom' if 'stripOrientation' is vertical, 'right' if horizontal).</span></p>
+							<h4>stripDirection</h4>
+							<p><span class="setting-type">(string)</span> <span class="setting-value">default is: <em>'default'</em>.</span> 
+							<span class="setting-desc">Available values: 'default' (default direction is 'top to bottom' if 'stripOrientation' is vertical, 'left to right' if horizontal), or 'reverse' (reverse direction is 'bottom to top' if 'stripOrientation' is vertical, 'right to left' if horizontal). Extra value: 'auto' (only for 'curtain' effect).</span></p>
+							
+							<h2>Extending <span class="code-sitename">Slider Kit</span></h2>
+							<h3>Fetching the <span class="code-sitename">Slider Kit</span> instance</h3>
+							<p>A way of extending <span class="code-sitename">Slider Kit</span> is to fetch the instance from anywhere on your page.</p>
+							<div class="code-pre">
+							$(".anyclassorid").sliderkit(); <span class="code-comment">// initialize the slider object</span>
+							<br /><br />
+							var mySliderkit = $(".anyclassorid").data("sliderkit"); // <span class="code-comment">'mySliderkit' is now a sliderkit instance</span>
+							<br /><br />
+							$('#play').click(function() {<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;mySliderkit.autoScrollStart(); // <span class="code-comment">will start slideshow when the element #play is clicked</span><br />
+							});
+							</div>
+							<p>See <a href="demos/extending.html">demo page</a>.</p>
+							
+							<h3>API Methods</h3>
+							
+							<h4>autoScrollStart()</h4>
+							<p>Starts the auto scrolling.</p>
+						
+							<h4>autoScrollStop()</h4>
+							<p>Stops the auto scrolling.</p>
+							
+							<h4>playBtnStart()</h4>
+							<p>Starts the auto scrolling and changes the Play button CSS class.</p>
+							
+							<h4>playBtnPause()</h4>
+							<p>Stops the auto scrolling and changes the Play button CSS class.</p>
+							
+							<h4>navPrev()</h4>
+							<p>Scroll the nav to the previous line.</p>
+							
+							<h4>navNext()</h4>
+							<p>Scroll the nav to the next line.</p>
+
+							<h4>stepBackward()</h4>
+							<p>Displays the previous item in line, or the last if you are at the first item.</p>
+							
+							<h4>stepForward()</h4>
+							<p>Displays the previous item in line, or the last if you are at the first item.</p>
+							
+							<h4>changeWithId( index )</h4>
+							<p>Switches item using the specify index.</p>
+							
+							<h4>selectThumbnail( index )</h4>
+							<p>Highlight item using the specify index.</p>
+						</div>
+					</div>						
+					<div class="sliderkit-panel">
+						<div class="sliderkit-panel-body">
+							<h1 id="Troubleshooting">Troubleshooting</h1>
+							<h2>Common errors</h2>
+							<p>If you are having trouble running the plugin, start by checking these basic points:</p>
+							<ul>
+								<li>The slider main container must have defined width and height values in the CSS (height can be null if the "freeheight" option is activated). Otherwise, default values (500x350) will be taken.</li>
+								<li>The CSS class names over the HTML tags must be respected (check the <a href="#htmlelements">HTML elements</a> section).</li>
+								<li>If you are testing a gallery, the panels number must be equal to the navigation thumbnails number.</li>
+								<li>If you are imbricating sliders, they must have different 'cssprefix' values.</li>
+								<li>Globally, many errors come from CSS bugs. In doubt, checking the demos CSS file might help.</li>
+							</ul>
+							<h2>Debug mode</h2>
+							<p>To help you finding what's wrong with your plugin installation, you can activate the debug mode option:</p>
+							<pre><em class="code-setting">debug:</em><em class="code-value">true</em></pre>
+							<p>The script will stop on errors during its execution and display codes:</p>
+							<ul>
+								<li><span class="code-error">"Error #01"</span>: (HTML issue) At least a carousel or a panel set must be found in the HTML.</li>
+								<li><span class="code-error">"Error #02"</span>: (CSS issue) You must define the slider height or width values in the CSS. Default values are taken if not.</li>
+								<li><span class="code-error">"Error #03"</span>: (HTML issue) If you are testing a gallery, the panels number must be equal to the navigation thumbnails number.</li>
+								<li><span class="code-error">"TypeError: this.Counter is not a function..."</span>: (JS issue) The <span class="code-sitename">Slider Kit</span> Counter add-on is missing.</li>
+								<li><span class="code-error">"TypeError: this.DelayCaption is not a function..."</span>: (JS issue) The <span class="code-sitename">Slider Kit</span> DelayCaption add-on is missing.</li>
+								<li><span class="code-error">"TypeError: this.Timer is not a function..."</span>: (JS issue) The <span class="code-sitename">Slider Kit</span> Timer add-on is missing.</li>
+								<li><span class="code-error">"TypeError: this.ImageFx is not a function..."</span>: (JS issue) The <span class="code-sitename">Slider Kit</span> ImageFx add-on is missing.</li>
+								<li><span class="code-error">"DelayCaption #01"</span>: (HTML issue) No textbox found in the slider.</li>
+								<li><span class="code-error">"DelayCaption #02"</span>: (CSS issue) The textbox element must have specified width/height values in the CSS.</li>
+								<li><span class="code-error">"DelayCaption #03"</span>: (JS Info) 'obj.options.autospeed' option value has been increased to fit animation duration.</li>
+								<li><span class="code-error">"ImageFx #01"</span>: (HTML issue) No image was found in the panels container. ImageFx only applies on images.</li>
+								<li><span class="code-error">"ImageFx #02"</span>: (JS issue) The image effect name doesn't exist. Default name is taken instead.</li>
+								<li><span class="code-error">"ImageFx #03"</span>: (HTML issue) No image was found in the current panel container. The transition is aborted.</li>
+							</ul>
+
+							<h2>Report an issue</h2>
+							<p>If you find an issue using <span class="code-sitename">Slider Kit</span>, thanks to <a href="http://code.google.com/p/sliderkit/issues/list" target="_blank">report it</a>.</p>
+							
+							<h2>Online help</h2>
+							<p>If you still can't find a solution to your problem, try the <a href="http://groups.google.com/group/sliderkit" target="_blank">Slider Kit jQuery plugin Google Group</a>.</p>
+						</div>
+					</div>						
+					<div class="sliderkit-panel notocindex">
+						<div class="sliderkit-panel-body">
+							<h1 id="About">About</h1>
+							<h2>Thanks to</h2>
+							<p>While developing <span class="code-sitename">Slider Kit</span>, I was helped by many excellent jQuery works:<br/>
+							<a href="http://sorgalla.com/jcarousel/" target="_blank" title="(opens in a new window)">jCarousel</a>, 
+							<a href="http://www.gmarwaha.com/jquery/jcarousellite/" target="_blank" title="(opens in a new window)">jCarousel Lite</a>, 
+							<a href="http://galleria.aino.se/" target="_blank" title="(opens in a new window)">Galleria</a>, 
+							<a href="http://plugins.jquery.com/project/galleryview" target="_blank" title="(opens in a new window)">Gallery view</a>,
+							<a href="http://www.jacksasylum.eu/ContentFlow/" target="_blank" title="(opens in a new window)">Contentflow</a>, 
+							<a href="http://nivo.dev7studios.com/" target="_blank" title="(opens in a new window)">Nivo Slider</a>,  
+							<a href="http://malsup.com/jquery/cycle/" target="_blank" title="(opens in a new window)">jQuery Cycle</a>.</p>
+							<br/>
+							<p><span class="code-sitename">Slider Kit</span> packed version is generated through <a href="http://dean.edwards.name/packer/" title="(opens in a new window)" target="_blank">Dean Edwards's packer</a>.</p>
+							<br/>
+							<p>All photos used in the demos pages are from Camille (New York, 2008).</p>
+							<h2>Awards</h2>
+							<a href="http://webscripts.softpedia.com/script/Image-Galleries/Slider-Kit-67995.html" title="Go to Softpedia SliderKit homepage (new window)" target="_blank"><img src="lib/images/softpedia_pick_award_m.gif" alt="Softpedia Pick Award" /></a>
+							<h2>Donate</h2>
+							<div id="donate">
+								<p>If you like this plugin, consider making a donation: <a href="http://www.kyrielles.net/sliderkit/sliderkit_en.html#About" target="_blank">http://www.kyrielles.net/sliderkit/</a>, click "Donate".</p>
+								<!--
+								<p>If you like this plugin, consider making a donation:</p>
+								<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="cmd" value="_s-xclick">
+									<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHVwYJKoZIhvcNAQcEoIIHSDCCB0QCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYA28Bc0bi1Da73DtcD7q+Noqfq8cCGupG/uSsHyUxjNfJ/JcmyWliqnsQXzTlewm7EhbyPGfjbtPVyfne2dz6+qEFTM476obEiYnYn/Ams8GslQN2dge89n93KwnDoIDmuFpj3iESiX5Nuzs+OnpwhnLImhhTefb8rFyqoV7po0ODELMAkGBSsOAwIaBQAwgdQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIUwpdwO4e3oqAgbCijL3v+7sJrFqSKDKD+4Geb2apST/cedPCSR/3BOxELbuTlKjEw2O8ZicodA361kt8UPuf84+PZShsGmiiEr3O+hQXACYtpoNnu1qKFDSkAqhnhEINc8ehCeO6R2ckvSEj/l3mOAlwDuRz4VDUj3hXMesLo3WGxaaS0LU+TDnoFqGycMAtK/Q6bG3Z/1g/WY7McI4riSGIGBhB4vG0SZSz7pGXRQ2I1KCk+szR6RVS76CCA4cwggODMIIC7KADAgECAgEAMA0GCSqGSIb3DQEBBQUAMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTAeFw0wNDAyMTMxMDEzMTVaFw0zNTAyMTMxMDEzMTVaMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwUdO3fxEzEtcnI7ZKZL412XvZPugoni7i7D7prCe0AtaHTc97CYgm7NsAtJyxNLixmhLV8pyIEaiHXWAh8fPKW+R017+EmXrr9EaquPmsVvTywAAE1PMNOKqo2kl4Gxiz9zZqIajOm1fZGWcGS0f5JQ2kBqNbvbg2/Za+GJ/qwUCAwEAAaOB7jCB6zAdBgNVHQ4EFgQUlp98u8ZvF71ZP1LXChvsENZklGswgbsGA1UdIwSBszCBsIAUlp98u8ZvF71ZP1LXChvsENZklGuhgZSkgZEwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAgV86VpqAWuXvX6Oro4qJ1tYVIT5DgWpE692Ag422H7yRIr/9j/iKG4Thia/Oflx4TdL+IFJBAyPK9v6zZNZtBgPBynXb048hsP16l2vi0k5Q2JKiPDsEfBhGI+HnxLXEaUWAcVfCsQFvd2A1sxRr67ip5y2wwBelUecP3AjJ+YcxggGaMIIBlgIBATCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwCQYFKw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTExMDIyMjIyMjUzN1owIwYJKoZIhvcNAQkEMRYEFMEXW6HOIRc0WIM2fJ1C3WlN+AHXMA0GCSqGSIb3DQEBAQUABIGArfU73Gq+jp7Rq35FCelLO9WhvXn0EYt+wrMDrk+yfVbdYcWkbwKgxSrPCOobVTYG4Wgfv+hv0WCA1hmZ/RzpJ0zvphoGPJNiQrfMTJpgJq7uTRcarwDWNlOxU0aZG9Jc4cgt2l3f/5LbjjZdZCnsuq4EclQ5Uljoqck+Jjc6wDU=-----END PKCS7-----
+									">
+									<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+									<img alt="" border="0" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+								</form>
+								-->
+								<div class="spacer"></div>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

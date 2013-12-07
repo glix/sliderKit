@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Slider Kit > Tabs</title>
+		<meta name="Keywords" content="slider, kit, slideshow, gallery, carousel, jquery plugin" />
+		<meta name="Description" content="Slider Kit jQuery slideshow plugin: tabs menus examples" />
+		
+		<!-- jQuery library -->
+		<script type="text/javascript" src="../lib/js/external/_oldies/jquery-1.3.min.js"></script>
+		<!--<script type="text/javascript" src="../lib/js/external/jquery-1.6.2.min.js"></script>-->
+		
+		<!-- jQuery Plugin scripts -->
+		<script type="text/javascript" src="../lib/js/external/jquery.easing.1.3.min.js"></script>
+		<script type="text/javascript" src="../lib/js/external/jquery.mousewheel.min.js"></script>
+		
+		<!-- Slider Kit scripts -->
+		<script type="text/javascript" src="../lib/js/sliderkit/jquery.sliderkit.1.9.2.pack.js"></script>
+
+		<!-- Slider Kit launch -->
+		<script type="text/javascript">
+			$(window).load(function(){ //$(window).load() must be used instead of $(document).ready() because of Webkit compatibility				
+	 
+				// Tabs > Standard
+				$(".tabs-standard").sliderkit({
+					auto:false,
+					tabs:true,
+					mousewheel:true,
+					circular:true,
+					panelfx:"none"
+				});
+				
+				// Tabs > No height
+				$(".tabs-noheight").sliderkit({
+					auto:false,
+					tabs:true,
+					freeheight:true,
+					circular:true
+				});
+				
+				// Tabs > Imbricated
+				$(".tabs-imbricate").sliderkit({
+					cssprefix:"customtabs",
+					auto:false,
+					tabs:true
+				});
+				
+				// Carousel > Demo #2
+				$(".carousel-demo2").sliderkit({
+					auto:false,
+					shownavitems:4,
+					scroll:1,
+					mousewheel:true,
+					circular:true
+				});
+				
+				// Pagination
+				$(".pagination-basic").sliderkit({
+					auto:false,
+					tabs:true,
+					freeheight:true
+				});
+				
+				
+				
+				// Button : Make the standard tabs menu slide
+				var myStandardTabs = $(".tabs-standard").data("sliderkit");
+				$("#tabs-standard-slide").click(
+					function(){
+						// Applies only once
+						if($(".sliderkit-panels-wrapper",myStandardTabs.domObj).size() == 0){
+							// Set the transition effect to "sliding"
+							myStandardTabs.options.panelfx = "sliding";
+							// The sliding effect requires a wrapper around the panels
+							myStandardTabs._wrapPanels();
+						}
+						
+						// Stops the click
+						return false;
+					}
+				);
+			});	
+		</script>
+		
+		<!-- Slider Kit styles -->
+		<link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-core.css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos.css" media="screen, projection" />
+		
+		<!-- Slider Kit compatibility -->	
+		<!--[if IE 6]><link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos-ie6.css" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos-ie7.css" /><![endif]-->
+		<!--[if IE 8]><link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-demos-ie8.css" /><![endif]-->
+
+		<!-- Site styles -->
+		<link rel="stylesheet" type="text/css" href="../lib/css/sliderkit-site.css" media="screen, projection" />
+		
+	</head>
+	<body>
+		<div id="header">
+			<div id="header-wrapper">
+				<div id="header-title"><a href="../sliderkit_en.html" title="SliderKit Homepage">Slider Kit, sliding contents with jQuery.</a></div>
+				<div class="spacer"></div>
+			</div>
+		</div>
+		<div id="page" class="inner layout-1col">
+			<div id="content">
+				<h1 class="code-first">Tabs menu</h1>
+				
+				<noscript><div class="noscript"><span class="code-sitename">Slider Kit</span> jQuery plugin requires Javascript activation.</div></noscript>
+
+				<h2>Classic tabs navigation</h2>
+				<p>A classic tabs menu system. Panel transition effect is disable.</p>
+				<p><strong>Features: </strong>tabs, mousewheel, circular.</p>
+
+				<!-- Start tabs-standard -->
+				<div class="sliderkit tabs-standard">
+					<div class="sliderkit-nav">
+						<div class="sliderkit-nav-clip">
+							<ul>
+								<li><a href="#" title="[link title]">Lorem ipsum</a></li>
+								<li><a href="#" title="[link title]">Lorem ipsum dolor est</a></li>
+								<li><a href="#" title="[link title]">Lorem ipsum</a></li>
+								<li><a href="#" title="[link title]">Lorem ipsum dolor</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="sliderkit-panels">
+						<div class="sliderkit-panel">
+							<div class="sliderkit-news">
+								<a href="#" title="[Titre de l'article]"><img src="../lib/images/photos/small/sample-04.jpg" alt="[alternative text]" /></a>
+								<h3><a href="#">Lorem ipsum dolor est</a></h3>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+								<a class="sliderkit-news-readmore" href="#">Read more</a></p>
+							</div>
+						</div>
+						<div class="sliderkit-panel">
+							<div class="sliderkit-news">
+								<a href="#" title="[Titre de l'article]"><img src="../lib/images/photos/small/sample-01.jpg" alt="[alternative text]" /></a>
+								<h3><a href="#">Lorem ipsum</a></h3>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took...
+								<a class="sliderkit-news-readmore" href="#">Read more</a></p>
+							</div>
+						</div>
+						<div class="sliderkit-panel">
+							<div class="sliderkit-news">
+								<a href="#" title="[Titre de l'article]"><img src="../lib/images/photos/small/sample-04.jpg" alt="[alternative text]" /></a>
+								<h3><a href="#">Lorem ipsum dolor est</a></h3>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took...</p>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+								<a class="sliderkit-news-readmore" href="#">Read more</a></p>
+							</div>
+						</div>
+						<div class="sliderkit-panel">
+							<div class="sliderkit-news">
+								<a href="#" title="[Titre de l'article]"><img src="../lib/images/photos/small/sample-06.jpg" alt="[alternative text]" /></a>
+								<h3><a href="#">Lorem ipsum dolor</a></h3>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took...</p>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...
+								<a class="sliderkit-news-readmore" href="#">Read more</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // end of tabs-standard -->
+
+				<!-- Button using the API methods -->
+				<h3>Another example with sliding effect:</h3>
+				<a href="#" id="tabs-standard-slide">Make the tabs slide!</a>
+
+				
+				<h2>Tabs with no fixed height panels</h2>
+				<p>The tabs menu panels have no fixed height. Note that in this case you can't have smooth transitions (that required absolute position with a fixed height).</p>
+				<p><strong>Features: </strong>tabs, circular.</p>
+
+				<!-- Start tabs-noheight -->
+				<div class="sliderkit tabs-noheight">
+					<div class="sliderkit-nav">
+						<div class="sliderkit-nav-clip">
+							<ul>
+								<li><a href="#" title="[link title]">Lorem ipsum</a></li>
+								<li><a href="#" title="[link title]">Lorem ipsum dolor est</a></li>
+								<li><a href="#" title="[link title]">Lorem ipsum</a></li>
+								<li><a href="#" title="[link title]">Lorem ipsum dolor</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="sliderkit-panels">
+						<div class="sliderkit-panel">
+							<div class="sliderkit-news">
+								<a href="#" title="[Titre de l'article]"><img src="../lib/images/photos/small/sample-04.jpg" alt="[alternative text]" /></a>
+								<h3><a href="#">Lorem ipsum dolor est</a></h3>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.</p>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+								<a class="sliderkit-news-readmore" href="#">Read more</a></p>
+							</div>
+						</div>
+						<div class="sliderkit-panel">
+							<div class="sliderkit-news">
+								<a href="#" title="[Titre de l'article]"><img src="../lib/images/photos/small/sample-01.jpg" alt="[alternative text]" /></a>
+								<h3><a href="#">Lorem ipsum</a></h3>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took...
+								<a class="sliderkit-news-readmore" href="#">Read more</a></p>
+							</div>
+						</div>
+						<div class="sliderkit-panel">
+							<div class="sliderkit-news">
+								<a href="#" title="[Titre de l'article]"><img src="../lib/images/photos/small/sample-04.jpg" alt="[alternative text]" /></a>
+								<h3><a href="#">Lorem ipsum dolor est</a></h3>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took...</p>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took...
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+								<a class="sliderkit-news-readmore" href="#">Read more</a></p>
+							</div>
+						</div>
+						<div class="sliderkit-panel">
+							<div class="sliderkit-news">
+								<a href="#" title="[Titre de l'article]"><img src="../lib/images/photos/small/sample-06.jpg" alt="[alternative text]" /></a>
+								<h3><a href="#">Lorem ipsum dolor</a></h3>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took...</p>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</p>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took...
+								<a class="sliderkit-news-readmore" href="#">Read more</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // end of tabs-noheight -->
+
+				<h2>Tabs + imbricated slider</h2>
+				<p>This example shows how to imbricate 2 sliders. The parameter 'cssprefix' must be used to distinguish the sliders.</p>
+				
+				<!-- Start of tabs-imbricate -->
+				<div class="customtabs tabs-imbricate">
+					<div class="customtabs-nav">
+						<div class="customtabs-nav-clip">
+							<ul>
+								<li><a href="#" title="[link title]">Lorem ipsum dolor</a></li>
+								<li><a href="#" title="[link title]">Lorem ipsum dolor est</a></li>
+								<li><a href="#" title="[link title]">Lorem ipsum</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="customtabs-panels">
+						<div class="customtabs-panel">
+							<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s :
+							<div class="sliderkit carousel-demo2">
+								<div class="sliderkit-nav">
+									<div class="sliderkit-nav-clip">
+										<ul>
+											<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-01.jpg" alt="[Alternative text]" /></a></li>
+											<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-02.jpg" alt="[Alternative text]" /></a></li>
+											<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-03.jpg" alt="[Alternative text]" /></a></li>
+											<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-04.jpg" alt="[Alternative text]" /></a></li>
+											<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-05.jpg" alt="[Alternative text]" /></a></li>
+											<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-06.jpg" alt="[Alternative text]" /></a></li>
+											<li><a href="#" title="[link title]"><img src="../lib/images/photos/thumb/sample-07.jpg" alt="[Alternative text]" /></a></li>
+										</ul>
+									</div>
+									<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-prev"><a href="#" title="Step backward"><span>Previous</span></a></div>
+									<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-next"><a href="#" title="Step forward"><span>Next</span></a></div>
+								</div>
+							</div>				
+						</div>
+						<div class="customtabs-panel">
+							<div class="customtabs-news">
+								<a href="#" title="[Titre de l'article]"><img src="../lib/images/photos/small/sample-04.jpg" alt="[alternative text]" /></a>
+								<h3><a href="#">Lorem ipsum dolor est</a></h3>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+								<a class="customtabs-news-readmore" href="#">Read more</a></p>
+							</div>
+						</div>
+						<div class="customtabs-panel">
+							<div class="customtabs-news">
+								<a href="#" title="[Titre de l'article]"><img src="../lib/images/photos/small/sample-01.jpg" alt="[alternative text]" /></a>
+								<h3><a href="#">Lorem ipsum</a></h3>
+								<p>Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took...
+								<a class="customtabs-news-readmore" href="#">Read more</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // end of tabs-imbricate -->
+				
+				<h2>Pagination</h2>
+				<p>Using tabs menu to simulate a pagination navigation.</p>
+				
+				<!-- Start of pagination-basic -->
+				<div class="pagination-basic">
+					<div class="sliderkit-nav">
+						<div class="sliderkit-nav-clip">
+							<ul>
+								<li><a href="#" title="[link title]">1</a></li>
+								<li><a href="#" title="[link title]">2</a></li>
+								<li><a href="#" title="[link title]">3</a></li>
+								<li><a href="#" title="[link title]">4</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="sliderkit-panels">
+						<div class="sliderkit-panel">
+							<div class="sliderkit-block">A first content block.</div>
+							<div class="sliderkit-block">A second content block.</div>
+							<div class="sliderkit-block">A third content block.</div>
+							<div class="sliderkit-block">A fourth content block.</div>
+							<div class="sliderkit-block">A fifth content block.</div>
+						</div>
+						<div class="sliderkit-panel">
+							<div class="sliderkit-block">A sixth block.</div>
+							<div class="sliderkit-block">A seventh content block.</div>
+							<div class="sliderkit-block">A eighth content block.</div>
+							<div class="sliderkit-block">A ninth content block.</div>
+							<div class="sliderkit-block">A tenth content block.</div>
+						</div>
+						<div class="sliderkit-panel">
+							<div class="sliderkit-block">A eleventh block.</div>
+							<div class="sliderkit-block">A twelfth content block.</div>
+							<div class="sliderkit-block">A thirteenth content block.</div>
+							<div class="sliderkit-block">A fourteenth content block.</div>
+							<div class="sliderkit-block">A fifteenth content block.</div>
+						</div>
+						<div class="sliderkit-panel">
+							<div class="sliderkit-block">A sixteenth content block.</div>
+							<div class="sliderkit-block">A seventeenth content block.</div>
+							<div class="sliderkit-block">That's all folks !</div>
+						</div>
+					</div>
+					<div class="sliderkit-nav">
+						<div class="sliderkit-nav-clip">
+							<ul>
+								<li><a href="#" title="[link title]">1</a></li>
+								<li><a href="#" title="[link title]">2</a></li>
+								<li><a href="#" title="[link title]">3</a></li>
+								<li><a href="#" title="[link title]">4</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- // end of tabs-imbricate -->
+
+			</div>
+			<div class="spacer"></div>
+		</div>
+	</body>
+</html>
